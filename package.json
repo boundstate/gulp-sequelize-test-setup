@@ -1,0 +1,25 @@
+{
+  "name": "gulp-sequelize-test-setup",
+  "version": "0.0.1",
+  "description": "gulp plugin to set up test database and load fixtures with sequelize",
+  "keywords": [
+    "gulpplugin"
+  ],
+  "homepage": "https://github.com/boundstate/gulp-sequelize-test-setup",
+  "bugs": "https://github.com/boundstate/gulp-sequelize-test-setup/issues",
+  "author": "Bound State Software Inc",
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/boundstate/gulp-sequelize-test-setup.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "sequelize-test-setup": "0.0.2",
+    "through2": "^2.0.0"
+  }
+}
