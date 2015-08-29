@@ -1,6 +1,6 @@
 # Sequelize Test Setup Gulp Plugin
 
-Gulp plugin for setting up a test database and loading fixtures with [Sequelize](http://sequelizejs.com).
+Gulp plugin for setting up a test database and loading fixtures with [Sequelize].
 
 ## Install
 
@@ -12,15 +12,21 @@ npm install gulp-sequelize-test-setup
 
 ```js
 var sequelizeTestSetup = require('gulp-sequelize-test-setup');
-
 gulp.task('test:setup', function () {
-  // configure test environment
-  require('dotenv').load({path: 'test.env', silent: true});
-  return gulp.src('test/fixtures/**/*.json', {read: false})
+  var models = require('./models');
+  return gulp.src('test/fixtures/**/*', {read: false})
     .pipe(sequelizeTestSetup({
-      sequelize: require('./models').sequelize,
-      models: require('./models'),
-      migrationsPath: require('./.sequelizerc')['migrations-path']
+      sequelize: models.sequelize,
+      models: models,
+      migrationsPath: 'migrations'
     }));
 });
+gulp.task('test', ['test:setup'], ...);
 ```
+
+## Options
+
+See [sequelize-test-setup] for all available options.
+
+[Sequelize]: http://sequelizejs.com
+[sequelize-test-setup]: https://github.com/boundstate/sequelize-test-setup
