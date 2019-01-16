@@ -1,6 +1,6 @@
 {
   "name": "gulp-sequelize-test-setup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "gulp plugin to set up test database and load fixtures with sequelize",
   "keywords": [
     "gulpplugin"
