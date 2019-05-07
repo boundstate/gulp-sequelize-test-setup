@@ -9,6 +9,10 @@
   "bugs": "https://github.com/boundstate/gulp-sequelize-test-setup/issues",
   "author": "Bound State Software Inc",
   "main": "./index.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular --context conventional-changelog.json -i CHANGELOG.md -s",
+    "version": "npm run changelog && git add CHANGELOG.md"
+  },
   "files": [
     "index.js"
   ],
@@ -21,5 +25,8 @@
     "gulp-util": "^3.0.8",
     "sequelize-test-setup": "^1.0.0",
     "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.21"
   }
 }
