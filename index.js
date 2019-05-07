@@ -1,6 +1,6 @@
 var through = require('through2');
 var sequelizeTestSetup = require('sequelize-test-setup');
-var PluginError = require('gulp-util').PluginError;
+var PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-sequelize-test-setup';
 
