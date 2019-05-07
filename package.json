@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp-util": "^3.0.8",
-    "sequelize-test-setup": "0.0.5",
-    "through2": "^3.0.0"
+    "sequelize-test-setup": "^1.0.0",
+    "through2": "^3.0.1"
   }
 }
